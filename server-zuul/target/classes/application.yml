@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: server-zuul
+server:
+  port: 8095
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**   #以/api-a开头的请求路由到EUREKA-FEIGN服务
+      serviceId: EUREKA-FEIGN
+    api-b:
+      path: /api-b/** #以/api-b开头的请求路由到EUREKA-RIBBON服务
+      serviceId: EUREKA-RIBBON
+
+
+
+
+

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: server-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:heyic/SpringcloudConfig.git
+          search-paths: respo
+          username: heyic
+          password: 131796he
+      label: master
+
+
+server:
+  port: 8888

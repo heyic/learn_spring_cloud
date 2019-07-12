@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      discovery:
+        #配置中心读取文件
+        enabled: true
+        #配置中心的servieId，即服务名
+        service-id: eureka-config-server
+      label: master
+      profile: dev
+
+server:
+  port: 8102
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/

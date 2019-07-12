@@ -1,0 +1,18 @@
+server:
+    port: 8099
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8090/eureka
+
+turbine:
+    app-config: hystrix-dashboard, hystrix-dashboard-two
+    aggregator:
+        cluster-config: default
+    cluster-name-expression: new String("default")
+    combine-host-port: true
+
+spring:
+    application:
+        name: hystrix-turbine

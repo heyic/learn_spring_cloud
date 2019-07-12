@@ -1,0 +1,22 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: eureka-ribbon
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka
+
+logging:
+  level:
+    ROOT: info
+
+
+
+
+
+
